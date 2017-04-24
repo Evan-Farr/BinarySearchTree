@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BinaryTree
 {
-    class Node<T> where T : IComparable
+    public class Node<T> where T : IComparable
     {
         private T nodeValue;
         private Node<T> parent;

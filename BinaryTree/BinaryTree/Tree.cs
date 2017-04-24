@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BinaryTree
 {
-    class Tree<T> where T : IComparable
+    public class Tree<T> where T : IComparable
     {
         private int count;
         private Node<T> root;
@@ -14,15 +14,18 @@ namespace BinaryTree
         public int Count { get { return count; } set { count = value; } }
         public Node<T> Root { get { return root; } set { root = value; } }
 
-        public Tree(Node<T> root)
+        public Tree()
         {
-            this.root = root;
-            count = 1;
+            count = 0;
         }
 
         public void Add(Node<T> node, T value)
         {
-            if(value.CompareTo(node.NodeValue) == 0)
+            if(root == null)
+            {
+                root = new Node<T>(value);
+                count++;
+            }else if(value.CompareTo(node.NodeValue) == 0)
             {
                 throw new Exception("Unable to add because this value already exists in the tree.");
             }else if(value.CompareTo(node.NodeValue) < 0)
@@ -30,24 +33,24 @@ namespace BinaryTree
                 if(node.LeftChild == null)
                 {
                     node.LeftChild = new Node<T>(value);
+                    node.LeftChild.Parent = node;
                     count++;
                 }
                 else
                 {
                     Add(node.LeftChild, value);
-                    count++;
                 }
             }else
             {
                 if(node.RightChild == null)
                 {
                     node.RightChild = new Node<T>(value);
+                    node.RightChild.Parent = node;
                     count++;
                 }
                 else
                 {
                     Add(node.RightChild, value);
-                    count++;
                 }
             }
         }
@@ -55,7 +58,7 @@ namespace BinaryTree
         public bool Search(T value)
         {
             var current = root;
-            while(current != null)
+            while (current != null)
             {
                 if(current.NodeValue.Equals(value))
                 {

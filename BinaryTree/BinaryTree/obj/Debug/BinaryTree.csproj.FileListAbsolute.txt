@@ -1,2 +1,7 @@
 C:\Users\EvanC\Documents\GitHub\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe.config
 C:\Users\EvanC\Documents\GitHub\BinarySearchTree\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe.config
+C:\Users\EvanC\Documents\GitHub\BinarySearchTree\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe
+C:\Users\EvanC\Documents\GitHub\BinarySearchTree\BinaryTree\BinaryTree\bin\Debug\BinaryTree.pdb
+C:\Users\EvanC\Documents\GitHub\BinarySearchTree\BinaryTree\BinaryTree\obj\Debug\BinaryTree.csprojResolveAssemblyReference.cache
+C:\Users\EvanC\Documents\GitHub\BinarySearchTree\BinaryTree\BinaryTree\obj\Debug\BinaryTree.exe
+C:\Users\EvanC\Documents\GitHub\BinarySearchTree\BinaryTree\BinaryTree\obj\Debug\BinaryTree.pdb
