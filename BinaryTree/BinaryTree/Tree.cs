@@ -30,25 +30,40 @@ namespace BinaryTree
                 if(node.LeftChild == null)
                 {
                     node.LeftChild = new Node<T>(value);
-                }else
+                    count++;
+                }
+                else
                 {
                     Add(node.LeftChild, value);
+                    count++;
                 }
             }else
             {
                 if(node.RightChild == null)
                 {
                     node.RightChild = new Node<T>(value);
-                }else
+                    count++;
+                }
+                else
                 {
                     Add(node.RightChild, value);
+                    count++;
                 }
             }
         }
 
-        public void Search(T value)
+        public bool Search(T value)
         {
-            var startPoint = root;
+            var current = root;
+            while(current != null)
+            {
+                if(current.NodeValue.Equals(value))
+                {
+                    return true;
+                }
+                current = value.CompareTo(current.NodeValue) < 0 ? current.LeftChild : current.RightChild;
+            }
+            return false;
         }
     }
 }
