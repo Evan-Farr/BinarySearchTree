@@ -22,8 +22,27 @@ namespace BinaryTree
 
         public void Add(Node<T> node, T value)
         {
-            if ()
+            if(value.CompareTo(node.NodeValue) == 0)
             {
+                throw new Exception("Unable to add because this value already exists in the tree.");
+            }else if(value.CompareTo(node.NodeValue) < 0)
+            {
+                if(node.LeftChild == null)
+                {
+                    node.LeftChild = new Node<T>(value);
+                }else
+                {
+                    Add(node.LeftChild, value);
+                }
+            }else
+            {
+                if(node.RightChild == null)
+                {
+                    node.RightChild = new Node<T>(value);
+                }else
+                {
+                    Add(node.RightChild, value);
+                }
             }
         }
 

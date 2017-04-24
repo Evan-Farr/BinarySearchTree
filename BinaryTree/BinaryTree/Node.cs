@@ -10,15 +10,13 @@ namespace BinaryTree
     {
         private T nodeValue;
         private Node<T> parent;
-        private Node<T> children;
-        private Node<T> nodeLeft;
-        private Node<T> nodeRight;
+        private Node<T> leftChild;
+        private Node<T> rightChild;
 
         public T NodeValue { get { return nodeValue; } set { nodeValue = value; } }
-        public Node<T> Parent { get { return parent; } }
-        public Node<T> Children { get { return children; } set { children = value; } }
-        public Node<T> NodeLeft { get { return nodeLeft; } set { nodeLeft = value; } }
-        public Node<T> NodeRight { get { return nodeRight; } set { nodeRight = value; } }
+        public Node<T> Parent { get { return parent; } set { parent = value; } }
+        public Node<T> LeftChild { get { return leftChild; } set { leftChild = value; } }
+        public Node<T> RightChild { get { return rightChild; } set { rightChild = value; } }
 
         public Node(T nodeValue)
         {
