@@ -57,7 +57,7 @@ namespace BinaryTree
 
         public bool Search(T value)
         {
-            var current = root;
+            Node<T> current = root;
             while (current != null)
             {
                 if(current.NodeValue.Equals(value))
