@@ -1,0 +1,2 @@
+C:\Users\EvanC\Documents\GitHub\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe.config
+C:\Users\EvanC\Documents\GitHub\BinarySearchTree\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe.config
